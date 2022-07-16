@@ -1,0 +1,37 @@
+name: gonote
+description: A simple note Flutter app.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  redux: ^5.0.0
+  flutter_redux: ^0.10.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/montserrat_regular.ttf
+        - asset: assets/fonts/montserrat_medium.ttf
+          weight: 500
+        - asset: assets/fonts/montserrat_bold.ttf
+          weight: 700
