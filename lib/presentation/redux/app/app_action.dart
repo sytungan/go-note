@@ -5,11 +5,6 @@ class AppAction {
   }
 }
 
-class TabChangeAction {
-  final int index;
-  TabChangeAction(this.index);
-}
-
 class AppSuccessAction {
   final int isSuccess;
 

@@ -1,17 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
+import 'package:flutter_redux/flutter_redux.dart';
+import 'package:gonote/presentation/redux/app/app_state.dart';
+import 'package:redux/redux.dart';
+import 'config/themes/app_themes.dart';
 import 'presentation/pages/pages.dart';
+import 'presentation/redux/app/app_reducer.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: AppPage(),
-    );
+    return StoreProvider(
+        store: Store<AppState>(
+          appReducer,
+          initialState: AppState.initial(),
+        ),
+        child: MaterialApp(
+          theme: AppThemes.light,
+          home: const AppPage(),
+        ));
   }
 }
