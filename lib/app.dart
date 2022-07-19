@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:gonote/presentation/redux/app/app_state.dart';
 import 'package:redux/redux.dart';
+import 'config/scroll_behavior.dart';
 import 'config/themes/app_themes.dart';
 import 'presentation/pages/pages.dart';
 import 'presentation/redux/app/app_reducer.dart';
@@ -17,6 +18,7 @@ class App extends StatelessWidget {
           initialState: AppState.initial(),
         ),
         child: MaterialApp(
+          scrollBehavior: AppScrollBehavior(),
           theme: AppThemes.light,
           home: const AppPage(),
         ));

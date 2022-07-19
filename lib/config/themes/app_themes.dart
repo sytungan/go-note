@@ -6,8 +6,8 @@ class AppThemes {
 
   static ThemeData get light => ThemeData(
         appBarTheme: const AppBarTheme(
-          foregroundColor: AppColors.white,
-          backgroundColor: AppColors.black,
+          foregroundColor: AppColors.quartz,
+          backgroundColor: AppColors.white,
           centerTitle: true,
         ),
         fontFamily: 'Montserrat',

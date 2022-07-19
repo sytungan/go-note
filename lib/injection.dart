@@ -5,6 +5,6 @@ import 'data/datasources/database/drift_database.dart';
 
 final getIt = GetIt.instance;
 
-void setup() {
+void setupInjection() {
   getIt.registerSingleton<AppDatabase>(constructDb());
 }

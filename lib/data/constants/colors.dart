@@ -31,7 +31,7 @@ class AppColors {
   static const Color silverSand = Color(0xFFC4C4C4);
 
   /// The color name of hex code #C4C4C4 is Medium Gray
-  static const Color mediumhGray = Color(0xFFC4C4C4);
+  static const Color mediumGray = Color(0xFFC4C4C4);
 
   /// The color name of hex code #C4C4C4 is Medium Gray with opacity 30%
   static const Color mediumhGray30 = Color(0x4DC4C4C4);
@@ -50,4 +50,13 @@ class AppColors {
 
   /// The color name of hex code #2C3E66 is Deep Koamaru
   static const Color deepKoamaru = Color(0xFF2C3E66);
+
+  /// The color name of hex code #DEDEDE is Gainsboro
+  static const Color gainsboro = Color(0xFFDEDEDE);
+
+  /// The color name of hex code #4E4C47 is Quartz
+  static const Color quartz = Color(0xFF4E4C47);
+
+  /// The color name of hex code #7E7C78 is Gray (HTML/CSS Gray)
+  static const Color gray = Color(0xFF7E7C78);
 }

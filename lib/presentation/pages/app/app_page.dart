@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:gonote/presentation/pages/app/widgets/app_navigation_bar.dart';
+import 'package:gonote/presentation/pages/create/create_page.dart';
 import 'package:gonote/presentation/pages/pages.dart';
 import 'package:gonote/presentation/redux/app/app_state.dart';
 import 'package:gonote/presentation/redux/tab/tab.action.dart';
 import 'package:gonote/presentation/redux/tab/tab.state.dart';
+import 'package:gonote/utils/screen_size.dart';
 import 'package:redux/redux.dart';
 import 'widgets/widgets.dart';
 
@@ -13,7 +15,8 @@ class AppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool shouldShowRail = MediaQuery.of(context).size.width > 600;
+    final bool shouldShowRail = screenSize(context) != AppScreenSizes.small &&
+        screenSize(context) != AppScreenSizes.normal;
 
     return StoreConnector<AppState, _AppViewModel>(
         converter: _AppViewModel.fromStore,
@@ -51,6 +54,13 @@ class AppPage extends StatelessWidget {
                     currentIndex: currentTabIndex,
                     onTap: onChangeTab,
                   ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => CreatePage()));
+              },
+              child: const Icon(Icons.note_add),
+            ),
           );
         });
   }
