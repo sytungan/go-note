@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gonote/presentation/widgets/dialog/error_dialog.dart';
+import 'package:gonote/presentation/widgets/dialogs/error_dialog.dart';
 import 'package:gonote/presentation/widgets/widgets.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:gonote/utils/screen_size.dart';

@@ -21,7 +21,7 @@ class TextStyles {
 
   static TextStyle get appBarTitle => const TextStyle(
         fontSize: 16,
-        fontWeight: FontWeight.w100,
-        color: AppColors.mediumGray,
+        fontWeight: FontWeight.w500,
+        color: AppColors.quartz,
       );
 }
