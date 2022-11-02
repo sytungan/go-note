@@ -3,6 +3,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:gonote/presentation/pages/app/widgets/app_navigation_bar.dart';
 import 'package:gonote/presentation/pages/create/create_page.dart';
 import 'package:gonote/presentation/pages/pages.dart';
+import 'package:gonote/presentation/pages/photo/camera_page.dart';
 import 'package:gonote/presentation/redux/app/app_state.dart';
 import 'package:gonote/presentation/redux/tab/tab.action.dart';
 import 'package:gonote/presentation/redux/tab/tab.state.dart';
@@ -57,7 +58,7 @@ class AppPage extends StatelessWidget {
             floatingActionButton: FloatingActionButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => CreatePage()));
+                    context, MaterialPageRoute(builder: (_) => CameraPage()));
               },
               child: const Icon(Icons.note_add),
             ),
